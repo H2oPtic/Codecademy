@@ -1,6 +1,5 @@
 #Imports GDP data from World Bank API using Datareader
 
-import codecademylib3_seaborn
 from pandas_datareader import wb
 from datetime import datetime
 
