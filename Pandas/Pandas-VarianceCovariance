@@ -1,0 +1,8 @@
+#This fucntion calls variance for individual column and returns result
+dataframe['stocks'].var(); 
+dataframe['bonds'].var(); 
+
+
+#This function calls variance/covariance for entire dataframe
+dataframe.var()
+dataframe.cov()
