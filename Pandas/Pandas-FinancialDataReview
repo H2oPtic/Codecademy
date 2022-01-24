@@ -1,0 +1,15 @@
+import pandas as pd
+import pandas_datareader.data as web
+from datetime import datetime
+
+
+start = datetime(2008,1,1)
+end = datetime(2018, 1, 1)
+
+apple_prices = pd.read_csv('apple_prices.csv')
+print(apple_prices)
+
+print(apple_prices['open'].var())
+
+gas_prices = web.DataReader('APUS12A74714', 'fred', start, end )
+print(gas_prices)
