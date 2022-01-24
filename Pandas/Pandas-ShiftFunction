@@ -6,3 +6,15 @@ dataframe['name'].shift(-5);
 dataframe['price'].shift(3); 
 
 
+import pandas_datareader.data as web
+from datetime import datetime
+
+start = datetime(2008, 1, 1)
+end = datetime(2018, 1, 1)
+
+gdp = web.DataReader('GDP', 'fred', start, end)
+
+#This will calculate the increment growth over each column(3 months of growth)
+gdp['growth'] = gdp['GDP'] - gdp['GDP'].shift(1)
+
+print(gdp)
