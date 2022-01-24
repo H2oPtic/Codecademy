@@ -1,0 +1,19 @@
+#The DataReader function takes 4 arguments:
+
+    #'MORTGAGE30US' - An identifier provided by the API specifying the data we want back, in this case 30 year mortgage data in the US
+    #'fred' - The name of the API we want to access
+    #start_date, end_date - The date range we want the data to be from
+
+#The start and end dates are special data types called datetimes, which can be created using the Python datetime module.
+
+
+import pandas_datareader.data as web
+from datetime import datetime
+ 
+# year, month, day 
+start_date = datetime(2018, 7, 8) 
+end_date = datetime(2019, 4, 13)
+
+data = web.DataReader(‘MORTGAGE30US’, ‘fred’, start_date, end_date)
+
+print(data)
