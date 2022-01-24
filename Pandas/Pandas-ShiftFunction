@@ -1,0 +1,8 @@
+# shifts all rows down by 1
+dataframe.shift(1); 
+# shifts all rows in name column up 5
+dataframe['name'].shift(-5); 
+# shifts all rows in the price column down 3
+dataframe['price'].shift(3); 
+
+
