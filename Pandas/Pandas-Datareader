@@ -1,0 +1,13 @@
+#Imports GDP data from World Bank API using Datareader
+
+import codecademylib3_seaborn
+from pandas_datareader import wb
+from datetime import datetime
+
+start = datetime(2005, 1, 1)
+end = datetime(2008, 1, 1)
+indicator_id = 'NY.GDP.PCAP.KD'
+
+gdp_per_capita = wb.download(indicator=indicator_id, start=start, end=end, country=['US', 'CA', 'MX'])
+
+print(gdp_per_capita)
