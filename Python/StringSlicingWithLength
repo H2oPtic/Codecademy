@@ -1,0 +1,11 @@
+first_name = "Reiko"
+last_name = "Matsuki"
+
+def password_generator(first_name, last_name):
+  length = len(first_name)
+  length1 = len(last_name)
+  new_name = first_name[length-3:] + last_name[length1-3:]
+  return new_name
+
+temp_password = password_generator(first_name, last_name)
+print(temp_password)
