@@ -1,0 +1,45 @@
+##Splitting Strings: Returns List
+
+line_one = "The sky has given over"
+
+line_one_words = line_one.split()
+
+print(line_one_words)
+
+
+
+###############################
+greatest_guitarist = "santana"
+print(greatest_guitarist.split('n'))
+# => ['sa', 'ta', 'a']
+
+#Ending with 'a' will end with open string
+print(greatest_guitarist.split('a'))
+# => ['s', 'nt', 'n', ' ']
+
+
+###############################
+
+uthors = "Audre Lorde,Gabriela Mistral,Jean Toomer,An Qi,Walt Whitman,Shel Silverstein,Carmen Boullosa,Kamala Suraiyya,Langston Hughes,Adrienne Rich,Nikki Giovanni"
+
+author_names = authors.split(',')
+
+print(author_names)
+
+author_last_names = []
+for name in author_names:
+  author_last_names.append(name.split()[-1])
+  
+print(author_last_names)
+
+
+#############################
+smooth_chorus = \
+"""And if you said, "This life ain't good enough."
+I would give my world to lift you up
+I could change my life to better suit your mood
+Because you're so smooth"""
+ 
+chorus_lines = smooth_chorus.split('\n')
+ 
+print(chorus_lines)
