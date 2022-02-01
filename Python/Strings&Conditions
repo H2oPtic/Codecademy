@@ -1,0 +1,14 @@
+favorite_fruit = "blueberry"
+counter = 0
+for character in favorite_fruit:
+  if character == "b":
+    counter = counter + 1
+print(counter)
+
+
+def letter_check(word, letter):
+  for i in word:
+    if i == letter:
+      return True
+  return False
+print(letter_check('strawberry','y'))
